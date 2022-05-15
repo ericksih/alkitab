@@ -5,6 +5,7 @@ import { useQuery, gql } from '@apollo/client';
 import { dataBook } from '../utils';
 
 import { BackTop, Spin, Skeleton, Divider } from 'antd';
+import BookItem from '../components/BookItem';
 
 const Book = () => {
   const { version, book } = useParams();
@@ -74,10 +75,6 @@ const Book = () => {
       </div>
       <div>
         {dataBook.map((result, idx) => {
-          // console.log(
-          //   '🚀 ~ file: Book.js ~ line 72 ~ {dataBook.map ~ result',
-          //   result
-          // );
           const { slug, ayat } = result;
 
           if (slug === book) {
@@ -113,29 +110,7 @@ const Book = () => {
             />
           ) : (
             <ul>
-              {data &&
-                data.passages.verses.map((verse, idx) => {
-                  if (verse.type === 'title') {
-                    return (
-                      <li key={idx}>
-                        <h1>
-                          <em>
-                            <u>{verse.content}</u>
-                          </em>
-                        </h1>
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <li key={idx}>
-                        <p className='ayat'>
-                          <span className='verse'>({verse.verse}) </span>
-                          <span className='content'>{verse.content}</span>
-                        </p>
-                      </li>
-                    );
-                  }
-                })}
+              <BookItem data={data} />
             </ul>
           )}
         </div>
