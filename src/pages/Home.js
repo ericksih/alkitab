@@ -34,13 +34,27 @@ const Home = () => {
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
           >
-            <Option value='tb'>Indonesia</Option>
-            <Option value='av'>English</Option>
-            <Option value='toba'>Batak</Option>
-            <Option value='sunda'>Sunda</Option>
-            <Option value='jawa'>Jawa</Option>
-            <Option value='makasar'>Makasar</Option>
-            <Option value='bali'>Bali</Option>
+            <Option value='tb' key='tb'>
+              Indonesia
+            </Option>
+            <Option value='av' key='av'>
+              English
+            </Option>
+            <Option value='toba' key='toba'>
+              Batak
+            </Option>
+            <Option value='sunda' key='sunda'>
+              Sunda
+            </Option>
+            <Option value='jawa' key='jawa'>
+              Jawa
+            </Option>
+            <Option value='makasar' key='makasar'>
+              Makasar
+            </Option>
+            <Option value='bali' key='bali'>
+              Bali
+            </Option>
           </Select>
         }
       >
