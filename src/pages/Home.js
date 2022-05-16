@@ -27,6 +27,7 @@ const Home = () => {
         tabPosition='top'
         tabBarExtraContent={
           <Select
+            defaultValue={version}
             showSearch
             placeholder='Select a person'
             optionFilterProp='children'
@@ -36,8 +37,13 @@ const Home = () => {
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
           >
-            <Option value='jack'>Jack</Option>
-            <Option value='lucy'>Lucy</Option>
+            <Option value='jack' key='jack' role='jack'>
+              jack
+            </Option>
+
+            <Option value='lucy' aria-disabled='true' key='lucy'>
+              Lucy
+            </Option>
             <Option value='tom'>Tom</Option>
           </Select>
 
