@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { dataBook } from '../utils';
 import { Link } from 'react-router-dom';
 
-import { Tabs, Select, Row, Col, Tooltip } from 'antd';
+import { Tabs, Select, Row, Col, Tooltip, Card } from 'antd';
 
 const { Option } = Select;
 const { TabPane } = Tabs;
@@ -65,6 +65,7 @@ const Home = () => {
                 <span
                   style={{
                     color: '#000',
+                    fontSize: '1.2em',
                   }}
                 >
                   PL
@@ -78,9 +79,10 @@ const Home = () => {
           <Row gutter={[4, 1]}>
             {dataBook.slice(0, 39).map((item, index) => (
               <Col span={8} key={index}>
-                <Link to={`/${version}/${item.slug}`} className='tab-pane-link'>
-                  <p>{item.judul}</p>
-                </Link>
+                <Card to={`/${version}/${item.slug}`} className='tab-pane-link'>
+                  {/* <p>{item.judul}</p> */}
+                  <Link to={`/${version}/${item.slug}`}> {item.judul} </Link>
+                </Card>
               </Col>
             ))}
           </Row>
@@ -93,6 +95,7 @@ const Home = () => {
                 <span
                   style={{
                     color: '#000',
+                    fontSize: '1.2em',
                   }}
                 >
                   PB
