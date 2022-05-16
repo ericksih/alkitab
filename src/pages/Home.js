@@ -11,6 +11,14 @@ const Home = () => {
   const [version, setVersion] = useState('tb');
   // console.log('🚀 ~ file: Home.js ~ line 3 ~ dataBook', dataBook.slice(0, 39));
 
+  function onChange(value) {
+    console.log(`selected ${value}`);
+  }
+
+  function onSearch(val) {
+    console.log('search:', val);
+  }
+
   return (
     <Fragment>
       <Tabs
@@ -20,17 +28,17 @@ const Home = () => {
         tabBarExtraContent={
           <Select
             showSearch
-            placeholder='Select a version'
-            style={{ width: 120 }}
-            onChange={(value) => setVersion(value)}
+            placeholder='Select a person'
+            optionFilterProp='children'
+            onChange={onChange}
+            onSearch={onSearch}
+            filterOption={(input, option) =>
+              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+            }
           >
-            <Option value='tb'>Indonesia</Option>
-            <Option value='av'>English</Option>
-            <Option value='toba'>Batak</Option>
-            <Option value='sunda'>Sunda</Option>
-            <Option value='jawa'>Jawa</Option>
-            <Option value='makasar'>Makasar</Option>
-            <Option value='bali'>Bali</Option>
+            <Option value='jack'>Jack</Option>
+            <Option value='lucy'>Lucy</Option>
+            <Option value='tom'>Tom</Option>
           </Select>
 
           // <Select
