@@ -18,15 +18,21 @@ const Home = () => {
         defaultActiveKey='1'
         tabPosition='top'
         tabBarExtraContent={
-          <select onChange={(e) => setVersion(e.target.value)}>
-            <option value='tb'>Indonesian</option>
-            <option value='en'>English</option>
-            <option value='bt'>Batak</option>
-            <option value='sn'>Sunda</option>
-            <option value='jw'>Jawa</option>
-            <option value='mk'>Makasar</option>
-            <option value='bl'>Bali</option>
-          </select>
+          <Select
+            defaultValue='tb'
+            style={{ width: 120 }}
+            onChange={(value) => setVersion(value)}
+            showSearch
+          >
+            <Option value='tb'>Indonesia</Option>
+            <Option value='av'>English</Option>
+            <Option value='toba'>Batak</Option>
+            <Option value='sunda'>Sunda</Option>
+            <Option value='jawa'>Jawa</Option>
+            <Option value='makasar'>Makasar</Option>
+            <Option value='bali'>Bali</Option>
+          </Select>
+
           // <Select
           //   style={{ width: 120 }}
           //   showSearch
