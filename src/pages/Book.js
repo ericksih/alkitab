@@ -44,35 +44,23 @@ const Book = () => {
 
   return (
     <Fragment>
-      <div className='judul-ayat'>
-        {loading ? (
-          <h2>
-            <Spin
-              style={{
-                margin: '1rem',
-              }}
-            />
-          </h2>
-        ) : (
-          <h2>
-            <Divider
-              orientation='left'
-              orientationMargin='0'
-              style={{
-                fontSize: '1.5rem',
-                marginBottom: '0.5em',
-              }}
-            >
-              {dataBook.find((item) => item.slug === book).judul +
-                ' ' +
-                chapter +
-                ' : ' +
-                ' 1 - ' +
-                hasil}
-            </Divider>
-          </h2>
-        )}
-      </div>
+      {loading ? (
+        <Spin
+          style={{
+            margin: '1rem',
+          }}
+        />
+      ) : (
+        <Divider orientation='left' orientationMargin='0'>
+          {dataBook.find((item) => item.slug === book).judul +
+            ' ' +
+            chapter +
+            ' : ' +
+            ' 1 - ' +
+            hasil}
+        </Divider>
+      )}
+
       <div>
         {dataBook.map((result, idx) => {
           const { slug, ayat } = result;
@@ -100,14 +88,7 @@ const Book = () => {
 
         <div className='content-chapter'>
           {loading ? (
-            <Skeleton
-              active
-              style={{
-                padding: '2rem',
-                marginLeft: '1rem',
-                marginRight: '2rem',
-              }}
-            />
+            <Skeleton active className='skeleton-ayat' />
           ) : (
             <ul>
               <BookItem data={data} />
@@ -115,18 +96,9 @@ const Book = () => {
           )}
         </div>
       </div>
-      <div>
-        <BackTop
-          visibilityHeight={200}
-          style={{
-            right: '1rem',
-            bottom: '1rem',
-            position: 'fixed',
-            zIndex: '999',
-          }}
-        />
-        <strong className='site-back-top-basic' />
-      </div>
+
+      <BackTop visibilityHeight={200} className='back-top' />
+      <strong className='site-back-top-basic' />
     </Fragment>
   );
 };

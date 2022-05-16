@@ -2,6 +2,12 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Main App */
+.main-app {
+    padding: 0.5rem 1rem;
+}
+/* End Main App */
+
 /* Navigation */
 .nav-wrapper {
     display: flex;
@@ -14,7 +20,6 @@
     margin-right: 1rem;
     color: #fff;
 }
-
 
 .nav-link {
     color: #fff;
@@ -56,7 +61,6 @@ width: 40px;
 padding: 5px;
 }
 
-
 .content-chapter {
  padding-top: 15px;
  margin-left: -2.5rem;
@@ -90,6 +94,18 @@ padding: 5px;
     background-color: rgba(243, 197, 212, 0.308);
 }
 
+.skeleton-ayat {
+    padding: 2rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+.back-top {
+    right: 1rem;
+    bottom: 1rem;
+    position: fixed;
+    z-index: 999;
+}
 /* End Book */
 
 /* Home */

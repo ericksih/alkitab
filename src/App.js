@@ -12,11 +12,7 @@ function App() {
     <Fragment>
       <BrowserRouter>
         <Navigation />
-        <div
-          style={{
-            padding: '0.5rem 1rem',
-          }}
-        >
+        <div className='main-app'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/:version/:book' element={<Book />} />
