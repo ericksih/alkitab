@@ -127,8 +127,30 @@ padding: 5px;
     color: #000;
     text-align: center;
 }
-
 /* End Home */
+
+/* About */
+.contact-us a {
+    margin-left: 0.5rem;
+    color: #000;
+    font-weight: 900;
+}
+
+.faq-about h3 {
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(92, 184, 200)
+}
+
+.faq-about ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-about li {
+    margin-bottom: 10px;
+}
+/* End About */
 
 
 @media screen and (max-width: 1150px) {

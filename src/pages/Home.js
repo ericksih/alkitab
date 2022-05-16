@@ -30,6 +30,8 @@ const Home = () => {
             <Option value='toba'>Batak</Option>
             <Option value='sunda'>Sunda</Option>
             <Option value='jawa'>Jawa</Option>
+            <Option value='makasar'>Makasar</Option>
+            <Option value='bali'>Bali</Option>
           </Select>
         }
       >

@@ -1,5 +1,11 @@
 import React from 'react';
 import { Divider, Tabs } from 'antd';
+import {
+  WhatsAppOutlined,
+  GithubOutlined,
+  MailFilled,
+  TwitterCircleFilled,
+} from '@ant-design/icons';
 
 const { TabPane } = Tabs;
 
@@ -13,67 +19,113 @@ const About = () => {
       }}
     >
       <TabPane tab='FAQ' key='1'>
-        <Divider orientation='left' orientationMargin='0'>
+        <Divider>
           <h4> Frequently Asking Question</h4>
         </Divider>
-        <ul>
-          <li>
-            <p>
-              <strong>What is the purpose of this project?</strong>
-            </p>
-            <p>
-              This project is a web application that aims to help people to read
-              Indonesian bible in a more convenient way.
-            </p>
-          </li>
-          <li>
-            <p>
-              <strong>Is it free to use?</strong>
-            </p>
-            <p>Yes, this project is free to use. You can use it for free.</p>
-          </li>
-          <li>
-            <p>
-              <strong>How to use it?</strong>
-            </p>
-            <p>
-              You can read the Indonesian bible in this project. You can choose
-              the version of the book you want to read{' '}
-              <em>
-                <strong>Indonesia, English, Batak, Sunda, Jawa.</strong>
-              </em>{' '}
-              You can also choose book and chapter you want to read.
-            </p>
-          </li>
-        </ul>
+        <div className='faq-about'>
+          <ul>
+            <li>
+              <h3>Is it free to use?</h3>
+              <p>Yes, it is free to use.</p>
+            </li>
+            <li>
+              <h3>How to use it?</h3>
+              <p>
+                You can read the Indonesian bible in this project. You can
+                choose the version of the book you want to read you can choose
+                between{' '}
+                <em>
+                  <strong>
+                    <u>
+                      Indonesian, English, Batak, Sunda, Jawa, Makasar and Bali
+                    </u>
+                  </strong>
+                </em>{' '}
+                language.
+              </p>
+            </li>
+          </ul>
+        </div>
       </TabPane>
       <TabPane tab='About' key='2'>
-        <Divider orientation='left' orientationMargin='0'>
+        <Divider>
           <h4>About</h4>
         </Divider>
-        <p>
-          Here{' '}
-          <a
-            href='https://github.com/sonnylazuardi/alkitab-api'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            API{' '}
-          </a>
-          for this project i use.
-        </p>
 
-        <p>Thanks for people who create this API, God bless you!</p>
+        <div className='faq-about'>
+          <ul>
+            <li>
+              <h3>What is the purpose of this project?</h3>
+              <p>
+                This project is a web application that allows users to Read
+                Bibel and learn about the bible. The application is built using
+                ReactJS and Ant Design. The application is designed to be easy
+                to use and easy to learn.
+              </p>
+            </li>
+            <li>
+              <h3>Who is behind this project?</h3>
+              <p>
+                This project free API from{' '}
+                <a
+                  href='https://bible.sonnylab.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Bible API
+                </a>{' '}
+                and is built by{' '}
+                <a
+                  href='https://github.com/sonnylazuardi'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  sonnylazuardi.
+                </a>
+                <strong> Thank you, God bless you! </strong>
+              </p>
+            </li>
+          </ul>
+        </div>
       </TabPane>
       <TabPane tab='Contact' key='3'>
-        <Divider orientation='left' orientationMargin='0'>
+        <Divider>
           <h4> Contact</h4>
         </Divider>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut optio
-          omnis praesentium sequi at veniam repellendus pariatur asperiores.
-          Accusamus totam nobis harum! Neque, numquam sunt!
-        </p>
+
+        <div className='contact-us'>
+          <p>
+            <WhatsAppOutlined />
+            <a
+              href='https://wa.me/628118750400'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              WhatsApp
+            </a>
+          </p>
+
+          <p>
+            <MailFilled />
+            <a
+              href='mailto:wbs@bpjs-kesehatan.go.id'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Email
+            </a>
+          </p>
+
+          <p>
+            <GithubOutlined />
+            <a href='#!'>Github</a>
+          </p>
+
+          <p>
+            <TwitterCircleFilled />
+            <a href='#!'>Twitter </a>
+          </p>
+        </div>
       </TabPane>
     </Tabs>
   );
