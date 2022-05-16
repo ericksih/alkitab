@@ -13,14 +13,17 @@
     display: flex;
     align-items: center;
     padding: 0.5rem 2rem;
-    background-color: rgb(92, 184, 200);
+    background-color: rgb(255, 255, 255);
 }
 
-
 .nav-link {
-    color: #fff;
-    font-weight: bold;
+    color: rgb(0, 0, 0);
+    /* font-weight: bold; */
     margin: 0.5rem;
+}
+
+.nav-link:hover {
+    color: rgb(0, 0, 0);
 }
 /* End Navigation */
 
