@@ -12,11 +12,7 @@ const Home = () => {
   // console.log('🚀 ~ file: Home.js ~ line 3 ~ dataBook', dataBook.slice(0, 39));
 
   function onChange(value) {
-    console.log(`selected ${value}`);
-  }
-
-  function onSearch(val) {
-    console.log('search:', val);
+    setVersion(value);
   }
 
   return (
@@ -28,40 +24,24 @@ const Home = () => {
         tabBarExtraContent={
           <Select
             defaultValue={version}
+            defaultOpen={false}
+            style={{ width: 120 }}
             showSearch
             placeholder='Select a person'
             optionFilterProp='children'
             onChange={onChange}
-            onSearch={onSearch}
             filterOption={(input, option) =>
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
           >
-            <Option value='jack' key='jack' role='jack'>
-              jack
-            </Option>
-
-            <Option value='lucy' aria-disabled='true' key='lucy'>
-              Lucy
-            </Option>
-            <Option value='tom'>Tom</Option>
+            <Option value='tb'>Indonesia</Option>
+            <Option value='av'>English</Option>
+            <Option value='toba'>Batak</Option>
+            <Option value='sunda'>Sunda</Option>
+            <Option value='jawa'>Jawa</Option>
+            <Option value='makasar'>Makasar</Option>
+            <Option value='bali'>Bali</Option>
           </Select>
-
-          // <Select
-          //   style={{ width: 120 }}
-          //   showSearch
-          //   value={version}
-          //   optionFilterProp='children'
-          //   onChange={(e) => setVersion(e)}
-          // >
-          //   <Option value='tb'>Indonesia</Option>
-          //   <Option value='av'>English</Option>
-          //   <Option value='toba'>Batak</Option>
-          //   <Option value='sunda'>Sunda</Option>
-          //   <Option value='jawa'>Jawa</Option>
-          //   <Option value='makasar'>Makasar</Option>
-          //   <Option value='bali'>Bali</Option>
-          // </Select>
         }
       >
         <TabPane
