@@ -19,10 +19,10 @@ const Home = () => {
         tabPosition='top'
         tabBarExtraContent={
           <Select
-            defaultValue='tb'
+            showSearch
+            placeholder='Select a version'
             style={{ width: 120 }}
             onChange={(value) => setVersion(value)}
-            showSearch
           >
             <Option value='tb'>Indonesia</Option>
             <Option value='av'>English</Option>
